@@ -3,6 +3,7 @@ package com.example.emicalculation;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -35,6 +36,24 @@ public class MainActivity<cal_EMI> extends AppCompatActivity {
         String principleAmt=principle.getText().toString();
         String interestRate=rate.getText().toString();
         String months=month.getText().toString();
+
+        if(TextUtils.isEmpty(principleAmt)){
+            principle.setError("Please, enter Principle amount.");
+            principle.requestFocus();
+            return;
+        }
+
+        if(TextUtils.isEmpty(interestRate)){
+            rate.setError("Please, enter Interest rate.");
+            rate.requestFocus();
+            return;
+        }
+
+        if(TextUtils.isEmpty(months)){
+            month.setError("Please, number of monthly installments.");
+            month.requestFocus();
+            return;
+        }
 
         if(principleAmt !=null && !"".equals(principleAmt) &&
         interestRate !=null && !"".equals(interestRate) &&
