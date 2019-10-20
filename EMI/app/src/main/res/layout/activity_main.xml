@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/emi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="EMI Calculation"
+        android:textSize="45dp"
+        android:textStyle="bold"
+        android:gravity="center"
+
+         />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your EMI result !"
+        android:textSize="30dp"
+        android:paddingLeft="70dp"
+        android:textColor="@color/colorRed"
+        android:layout_below="@id/emi"
+        android:layout_marginTop="20dp"
+
+        />
+
+    <TextView
+        android:id="@+id/pAmt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Principle amount :"
+        android:textSize="20dp"
+        android:typeface="monospace"
+        android:textStyle="bold"
+        android:gravity="left"
+        android:layout_below="@id/result"
+        android:layout_marginTop="35dp"
+        android:layout_marginLeft="10dp"
+
+        />
+
+    <EditText
+        android:id="@+id/pInput"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pAmt"
+        android:hint="Rs. 00000"
+        android:textSize="15dp"
+        android:inputType="numberDecimal"
+        android:singleLine="true"
+        android:layout_marginLeft="10dp"
+        android:gravity="center"
+        
+        />
+    
+    <TextView
+        android:id="@+id/iRate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Interest rate :"
+        android:textSize="20dp"
+        android:typeface="monospace"
+        android:textStyle="bold"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@id/pInput"/>
+
+    <EditText
+        android:id="@+id/rInput"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_below="@id/iRate"
+        android:hint="00%"
+        android:inputType="numberDecimal"
+        android:singleLine="true"
+        android:layout_marginLeft="10dp"
+        />
+
+    <TextView
+        android:id="@+id/nMonths"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Number of months :"
+        android:textSize="20dp"
+        android:typeface="monospace"
+        android:textStyle="bold"
+        android:layout_below="@id/rInput"
+        android:layout_marginLeft="10dp"/>
+
+    <EditText
+        android:id="@+id/nInput"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_below="@id/nMonths"
+        android:hint="0 months"
+        android:inputType="number"
+        android:singleLine="true"
+        android:layout_marginLeft="10dp"/>
+
+
+<Button
+    android:id="@+id/calculate"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Calculate"
+    android:textAllCaps="false"
+    android:padding="10dp"
+    android:gravity="center"
+    android:layout_below="@id/nInput"
+    android:layout_marginLeft="130dp"
+    android:layout_marginTop="40dp"
+    android:textStyle="normal"
+    android:textSize="25dp"
+    android:onClick="calculateEMI"
+
+
+    />
+
+
+
+    
+
+
+
+</RelativeLayout>

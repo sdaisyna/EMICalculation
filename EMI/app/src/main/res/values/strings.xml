@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">EMICalculation</string>
+    <string name="p"> *Loan amount or Principle </string>
+    <string name="r"> *Interest rate / month </string>
+    <string name="n"> *Number of monthly installments </string>
+    <string name="emi">*Equated Monthly Installments </string>
+</resources>
